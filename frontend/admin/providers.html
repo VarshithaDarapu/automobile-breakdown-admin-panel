@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Manage Providers</title>
+<link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<h2>Admin</h2>
+
+<a href="dashboard.html">Dashboard</a>
+<a href="users.html">Users</a>
+<a href="providers.html">Providers</a>
+<a href="requests.html">Requests</a>
+<a href="analytics.html">Analytics</a>
+<a href="logs.html">Logs</a> 
+<a href="admin-login.html">Logout</a>
+
+</div>
+
+<div class="main">
+
+<h1>Service Provider Management</h1>
+
+<input type="text" id="providerSearch" placeholder="Search provider..." onkeyup="searchProvider()">
+
+
+<table>
+
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Service</th>
+<th>Phone</th>
+<th>Status</th>
+<th>Action</th>
+</tr>
+
+<tr>
+<td>101</td>
+<td>Ravi</td>
+<td>Towing</td>
+<td>987654321</td>
+<td>Active</td>
+<td>
+<button onclick="editProvider(this)">Edit</button>
+<button onclick="deleteRow(this)">Delete</button>
+</td>
+</tr>
+
+<tr>
+<td>102</td>
+<td>Manoj</td>
+<td>Mechanic</td>
+<td>912345678</td>
+<td>Active</td>
+<td>
+<button onclick="editProvider(this)">Edit</button>
+<button onclick="deleteRow(this)">Delete</button>
+</td>
+</tr>
+
+</table>
+
+</div>
+
+<script src="admin.js"></script>
+
+</body>
+</html>
