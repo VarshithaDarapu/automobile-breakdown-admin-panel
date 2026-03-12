@@ -1,20 +1,50 @@
+const API_BASE_URL = "https://automobile-breakdown-backend.onrender.com";
 function login(){
 
-let username=document.getElementById("username").value
-let password=document.getElementById("password").value
+let email = document.getElementById("username").value
+let password = document.getElementById("password").value
 
-if(username=="admin" && password=="admin123"){
+fetch(API_BASE_URL + "/api/auth/login", {
 
-alert("Login Successful")
+method: "POST",
+
+headers: {
+"Content-Type": "application/json"
+},
+
+body: JSON.stringify({
+email: email,
+password: password
+})
+
+})
+
+.then(response => response.json())
+
+.then(data => {
+
+if(data.token){
+
+localStorage.setItem("token", data.token)
+
+alert("Login successful")
 
 window.location="dashboard.html"
 
-}
-else{
+}else{
 
-alert("Invalid Login")
+alert("Login failed")
 
 }
+
+})
+
+.catch(error => {
+
+console.error(error)
+alert("Server error")
+
+})
 
 }
 function deleteRow(button){
@@ -94,5 +124,6 @@ rows[i].style.display="none"
 }
 
 }
+
 
 }
