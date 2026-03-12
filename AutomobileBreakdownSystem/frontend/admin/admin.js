@@ -1,7 +1,7 @@
 const API_BASE_URL = "https://automobile-breakdown-backend.onrender.com";
 function login(){
 
-let email = document.getElementById("username").value
+let username = document.getElementById("username").value
 let password = document.getElementById("password").value
 
 fetch(API_BASE_URL + "/api/auth/login", {
@@ -13,7 +13,7 @@ headers: {
 },
 
 body: JSON.stringify({
-email: email,
+username: username,
 password: password
 })
 
@@ -26,9 +26,6 @@ password: password
 if(data.token){
 
 localStorage.setItem("token", data.token)
-
-alert("Login successful")
-
 window.location="dashboard.html"
 
 }else{
@@ -40,10 +37,8 @@ alert("Login failed")
 })
 
 .catch(error => {
-
 console.error(error)
 alert("Server error")
-
 })
 
 }
@@ -127,3 +122,4 @@ rows[i].style.display="none"
 
 
 }
+
