@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Manage Users</title>
+<link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<h2>Admin</h2>
+
+<a href="dashboard.html">Dashboard</a>
+<a href="users.html">Users</a>
+<a href="providers.html">Providers</a>
+<a href="requests.html">Requests</a>
+<a href="analytics.html">Analytics</a>
+<a href="logs.html">Logs</a>
+<a href="admin-login.html">Logout</a>
+
+</div>
+
+<div class="main">
+
+<h1>User Management</h1>
+
+<input type="text" placeholder="Search user..." id="search" onkeyup="searchUser()">
+
+<table>
+
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Email</th>
+<th>Vehicle</th>
+<th>Action</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>Rahul</td>
+<td>rahul@mail.com</td>
+<td>Bike</td>
+<td><button onclick="deleteRow(this)">Delete</button></td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>Anita</td>
+<td>anita@mail.com</td>
+<td>Car</td>
+<td><button onclick="deleteRow(this)">Delete</button></td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>Arjun</td>
+<td>arjun@mail.com</td>
+<td>Truck</td>
+<td><button onclick="deleteRow(this)">Delete</button></td>
+</tr>
+
+</table>
+
+</div>
+
+<script src="admin.js"></script>
+
+</body>
+</html>

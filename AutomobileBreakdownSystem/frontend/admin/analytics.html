@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Analytics</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<h2>Admin</h2>
+
+<a href="dashboard.html">Dashboard</a>
+<a href="users.html">Users</a>
+<a href="providers.html">Providers</a>
+<a href="requests.html">Requests</a>
+<a href="analytics.html">Analytics</a>
+<a href="logs.html">Logs</a>
+<a href="admin-login.html">Logout</a>
+
+</div>
+
+<div class="main">
+
+<h1>System Analytics</h1>
+
+<div style="width:600px;">
+<canvas id="chart1"></canvas>
+</div>
+
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+
+new Chart(document.getElementById("chart1"),{
+type:"bar",
+data:{
+labels:["Users","Providers","Requests"],
+datasets:[{
+label:"System Data",
+data:[120,30,60],
+backgroundColor:["blue","green","orange"]
+}]
+}
+});
+
+});
+</script>
+
+</body>
+</html>
